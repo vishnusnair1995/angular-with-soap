@@ -1,0 +1,15 @@
+ <h3>XMLtoJsonuinserver</h3>
+
+
+<!--
+{{this.dataEmp["firstName"]}}
+{{dataEmp["lastName"]}} -->
+<p>{{empDatafirstName}}</p>
+<p>{{empDatasecondName}}</p>
+
+<h3>XMLtojsoninclient</h3>
+
+  <li *ngFor="let emp of empData">
+   {{ emp.firstName["#text"] }}
+   {{emp.lastName ["#text"]}}
+  </li>
