@@ -1,0 +1,38 @@
+<div>
+  SOAP Calculator app
+  <span style="flex: 1 1 auto"></span>
+  <button mat-button (click)="showDiagnostic = !showDiagnostic">
+    <ng-container *ngIf="!showDiagnostic">Show Diagnostic</ng-container>
+    <ng-container *ngIf="showDiagnostic">Hide Diagnostic</ng-container>
+  </button>
+</div>
+
+
+
+      <div>
+        <input  name="intA" [(ngModel)]="intA" placeholder="A">
+      </div>
+
+      <div>
+        <input  name="intB" [(ngModel)]="intB" placeholder="B">
+      </div>
+
+
+    <div>
+      <button  (click)="sum()" [disabled]="loading">Sum</button>
+      <button (click)="subtract()" [disabled]="loading">Sub</button>
+    </div>
+
+
+
+      <div>Result</div>
+      <div>
+     <input  [(ngModel)]="message" placeholder="{{resultLabel}}">
+</div>
+
+<div  *ngIf="showDiagnostic">
+      <div>XML Response</div>
+ <p>{{ xmlResponse }}</p>
+  <div>JSON Response</div>
+  <p>{{ jsonResponse | json }}</p>
+</div>
